@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: green;
+            color: white;
+            padding: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            height: 80px;
+            width: 200px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<style>
-h1{
-    text-align: center;
-}
-</style>
 <body>
     <h1>Quiz World</h1>
+    <div class="button-container">
+        <a href="/Quiz1"><button id="history1Button">History 1</button></a>
+        <a href="/Quiz2"><button id="quiz2Button">Science 1</button></a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: green;
+            color: white;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            padding: 10px;
+        }
+
+        button {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 8%;
+        }
+
+        .selected {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body data-quiz-id="quiz1">
+    {% include 'navbar.html' %}
+    <h1>History 1</h1>
+    <div id="quiz">
+        <div id="q1" class="question-container">
+            <p>1. Who was the first president of the United States of America?</p>
+            <button>Abraham Lincoln</button>
+            <button>Thomas Jefferson</button>
+            <button>George Washington</button>
+            <button>James Monroe</button>
+        </div>
+
+        <div id="q2" class="question-container">
+            <p>2. Where was democracy first developed?</p>
+            <button>Greece</button>
+            <button>Egypt</button>
+            <button>England</button>
+            <button>Japan</button>
+        </div>
+
+        <div id="q3" class="question-container">
+            <p>3. Who invented the telephone?</p>
+            <button>Albert Einstein</button>
+            <button>Nikola Tesla</button>
+            <button>Alexander Graham Bell</button>
+            <button>Thomas Edison</button>
+        </div>
+
+        <div id="q4" class="question-container">
+            <p>4. Which historical figure famously crossed the Alps with elephants in order to attack Italy?</p>
+            <button>Boudicca</button>
+            <button>Vercingetorix</button>
+            <button>Attila the Hun</button>
+            <button>Hannibal Barca</button>
+        </div>
+
+        <div id="q5" class="question-container">
+            <p>5. What island was Napoleon Bonaparte first exiled to?</p>
+            <button>Elba</button>
+            <button>Jersey</button>
+            <button>Tahiti</button>
+            <button>Cyprus</button>
+        </div>
+    </div>
+    <button onclick="submitQuiz('quiz1')">Submit</button>
+    <p id="result"></p>
+</body>
+</html>

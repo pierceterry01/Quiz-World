@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: green;
+            color: white;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            padding: 10px;
+        }
+
+        button {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 8%;
+        }
+
+        .selected {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body data-quiz-id="quiz2">
+    {% include 'navbar.html' %}
+    <h1>Science 1</h1>
+    <div id="quiz">
+        <div id="q1" class="question-container">
+            <p>1. Which one of the following is an amphibian?</p>
+            <button>Lion</button>
+            <button>Frog</button>
+            <button>Snake</button>
+            <button>Whale</button>
+        </div>
+
+        <div id="q2" class="question-container">
+            <p>2. Which of the following is not one of the three types of rocks?</p>
+            <button>Metamorphic</button>
+            <button>Sedimentary</button>
+            <button>Molten</button>
+            <button>Igneous</button>
+        </div>
+
+        <div id="q3" class="question-container">
+            <p>3. What is the largest planet in our solar system?</p>
+            <button>Saturn</button>
+            <button>Earth</button>
+            <button>Venus</button>
+            <button>Jupiter</button>
+        </div>
+
+        <div id="q4" class="question-container">
+            <p>4. What is the forumla for water?</p>
+            <button>H20</button>
+            <button>CO2</button>
+            <button>CH4</button>
+            <button>KCI</button>
+        </div>
+
+        <div id="q5" class="question-container">
+            <p>5. What gas is needed by planets to perform photosynthesis</p>
+            <button>Oxygen</button>
+            <button>Carbon dioxide</button>
+            <button>Helium</button>
+            <button>Nitrogen</button>
+        </div>
+    </div>
+    <button onclick="submitQuiz('quiz2')">Submit</button>
+    <p id="result"></p>
+</body>
+</html>
